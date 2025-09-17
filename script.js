@@ -1,24 +1,42 @@
-function gerarEAtualizarSenha() {
-    // Pega a data e hora atuais
-    const agora = new Date();
-
-    // Extrai ano, mês, dia e hora
-    const ano = agora.getFullYear();
-    // getMonth() retorna o mês de 0 a 11, por isso somamos 1
-    const mes = String(agora.getMonth() + 1).padStart(2, '0');
-    const dia = String(agora.getDate()).padStart(2, '0');
-    const hora = String(agora.getHours()).padStart(2, '0');
-
-    // Monta a senha no formato ano-mes-dia-hora
-    const senhaGerada = `${ano}-${mes}-${dia}-${hora}`;
-
-    // Atualiza o texto na página
-    document.getElementById('senha').textContent = senhaGerada;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-// Roda a função pela primeira vez para não ficar "gerando..."
-gerarEAtualizarSenha();
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-// Configura um intervalo para verificar e atualizar a senha a cada segundo
-// Isso garante que a senha mude exatamente quando a hora virar
-setInterval(gerarEAtualizarSenha, 1000);
+h1 {
+    margin-top: 0;
+    color: #1c1e21;
+}
+
+p {
+    color: #606770;
+    margin-bottom: 25px;
+}
+
+.senha-box {
+    background-color: #e7f3ff;
+    border: 1px solid #1877f2;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+#senha {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1877f2;
+    letter-spacing: 2px;
+}
