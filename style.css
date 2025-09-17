@@ -1,4 +1,4 @@
-/* Importa a fonte Orbitron para ser usada no projeto */
+/* Importa a fonte Orbitron */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 body {
@@ -6,22 +6,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 30px 10px;
     margin: 0;
-    background-color: #1a1a1a; /* Fundo escuro */
+    background-color: #1a1a1a;
     color: #ffffff;
-    overflow: hidden; /* Evita barras de rolagem */
+    box-sizing: border-box;
 }
 
 .container {
+    width: 100%;
+    max-width: 500px;
     text-align: center;
     padding: 40px 50px;
     border-radius: 15px;
-    
-    /* Efeito de vidro fosco */
     background: rgba(35, 35, 35, 0.5);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
@@ -36,27 +37,83 @@ h1 {
 }
 
 #senha {
-    font-family: 'Orbitron', sans-serif; /* Usando a fonte digital */
+    font-family: 'Orbitron', sans-serif;
     font-size: 5em;
     font-weight: bold;
-    color: #39ff14; /* Cor verde neon */
+    color: #39ff14;
     letter-spacing: 4px;
-
-    /* Efeito de brilho (glow) para parecer um display */
-    text-shadow: 
-        0 0 5px rgba(57, 255, 20, 0.5),
-        0 0 10px rgba(57, 255, 20, 0.5),
-        0 0 20px rgba(57, 255, 20, 0.5);
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5), 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.5);
 }
 
-/* --- ESTA É A PARTE QUE VOCÊ DEVE ATUALIZAR --- */
-footer {
-    position: absolute; /* Tira o rodapé do fluxo normal da página */
-    bottom: 20px;       /* Fixa a 20 pixels da parte de baixo */
-    left: 50%;          /* Move o início do elemento para o meio da tela */
-    transform: translateX(-50%); /* Move o elemento de volta pela metade de seu próprio tamanho */
+.separator {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 40px 0;
+}
 
-    /* Estilos de texto */
+/* --- NOVOS ESTILOS PARA O GERADOR DE QR CODE --- */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #39ff14;
+    color: #1a1a1a;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8aff78;
+}
+
+#qrcode-container {
+    margin-top: 30px;
+    background-color: white; /* Fundo branco para o QR Code ser legível */
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block; /* Ajusta o tamanho ao QR Code */
+    min-height: 158px; /* Evita que o layout pule antes da geração */
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.9em;
 }
