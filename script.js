@@ -1,42 +1,23 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f2f5;
-    color: #333;
+function calcularEAtualizarSenha() {
+    // Pega a data e hora atuais
+    const agora = new Date();
+
+    // Extrai ano, mês, dia e hora como números
+    const ano = agora.getFullYear();
+    const mes = agora.getMonth() + 1; // getMonth() é de 0 a 11
+    const dia = agora.getDate();
+    const hora = agora.getHours();
+
+    // Calcula o resultado da equação
+    const resultado = ano - mes - dia - hora;
+
+    // Atualiza o resultado na página
+    document.getElementById('senha').textContent = resultado;
 }
 
-.container {
-    text-align: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+// Roda a função pela primeira vez
+calcularEAtualizarSenha();
 
-h1 {
-    margin-top: 0;
-    color: #1c1e21;
-}
-
-p {
-    color: #606770;
-    margin-bottom: 25px;
-}
-
-.senha-box {
-    background-color: #e7f3ff;
-    border: 1px solid #1877f2;
-    border-radius: 6px;
-    padding: 20px;
-}
-
-#senha {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #1877f2;
-    letter-spacing: 2px;
-}
+// Configura um intervalo para recalcular a cada segundo.
+// Isso garante que a senha mude exatamente quando a hora virar.
+setInterval(calcularEAtualizarSenha, 1000);
