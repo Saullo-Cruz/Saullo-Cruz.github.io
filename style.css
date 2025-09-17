@@ -16,9 +16,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     text-align: center;
-    padding: 40px 50px;
+    padding: 40px;
     border-radius: 15px;
     background: rgba(35, 35, 35, 0.5);
     backdrop-filter: blur(10px);
@@ -29,67 +29,58 @@ body {
 
 h1 {
     margin-top: 0;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #cccccc;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 25px;
-}
-
-#senha {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 5em;
-    font-weight: bold;
-    color: #39ff14;
-    letter-spacing: 4px;
-    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5), 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.5);
-}
-
-.separator {
-    border: none;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 40px 0;
-}
-
-/* --- NOVOS ESTILOS PARA O GERADOR DE QR CODE --- */
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas */
-    gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .form-group {
+    margin-bottom: 20px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 0.9em;
     color: #cccccc;
+    text-transform: uppercase;
 }
 
-.form-group input {
+/* Estilo unificado para input e textarea */
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 1em;
     box-sizing: border-box;
+    transition: all 0.3s ease; /* Transição suave */
+    resize: vertical; /* Permite redimensionar a altura do textarea */
+}
+
+/* Efeito de brilho ao focar no campo */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #39ff14;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
 }
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
+    margin-top: 10px;
     border: none;
     border-radius: 5px;
     background-color: #39ff14;
     color: #1a1a1a;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
@@ -102,11 +93,14 @@ button:hover {
 
 #qrcode-container {
     margin-top: 30px;
-    background-color: white; /* Fundo branco para o QR Code ser legível */
+    background-color: white;
     padding: 15px;
     border-radius: 8px;
-    display: inline-block; /* Ajusta o tamanho ao QR Code */
-    min-height: 158px; /* Evita que o layout pule antes da geração */
+    display: inline-block;
+    min-height: 158px;
+    min-width: 158px;
+    box-sizing: content-box;
+    transition: all 0.3s ease;
 }
 
 footer {
