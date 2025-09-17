@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Senha</title>
+    <title>Gerador de Senha e QR Code</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -17,6 +19,30 @@
         <div class="senha-display">
             <span id="senha">calculando...</span>
         </div>
+
+        <hr class="separator">
+
+        <h1>GERADOR DE QR CODE</h1>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="bomba">Bomba</label>
+                <input type="text" id="bomba" placeholder="002">
+            </div>
+            <div class="form-group">
+                <label for="bico">Bico</label>
+                <input type="text" id="bico" placeholder="01">
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor (R$)</label>
+                <input type="text" id="valor" placeholder="150,00">
+            </div>
+             <div class="form-group">
+                <label for="frentista">Frentista</label>
+                <input type="text" id="frentista" placeholder="Nome do Frentista">
+            </div>
+        </div>
+        <button id="gerar-btn">Gerar QR Code</button>
+        <div id="qrcode-container"></div>
     </div>
 
     <footer>
