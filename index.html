@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Senha e QR Code</title>
+    <title>Gerador QR Code</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,33 +15,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>GERADOR DE SENHA</h1>
-        <div class="senha-display">
-            <span id="senha">calculando...</span>
+        <h1>Gerador QR Code</h1>
+        
+        <div class="form-group">
+            <label for="ip-porta">IP E PORTA</label>
+            <input type="text" id="ip-porta" placeholder="Ex: 192.168.111.193:8080">
         </div>
 
-        <hr class="separator">
-
-        <h1>GERADOR DE QR CODE</h1>
-        <div class="form-grid">
-            <div class="form-group">
-                <label for="bomba">Bomba</label>
-                <input type="text" id="bomba" placeholder="002">
-            </div>
-            <div class="form-group">
-                <label for="bico">Bico</label>
-                <input type="text" id="bico" placeholder="01">
-            </div>
-            <div class="form-group">
-                <label for="valor">Valor (R$)</label>
-                <input type="text" id="valor" placeholder="150,00">
-            </div>
-             <div class="form-group">
-                <label for="frentista">Frentista</label>
-                <input type="text" id="frentista" placeholder="Nome do Frentista">
-            </div>
+        <div class="form-group">
+            <label for="pdv">PDV</label>
+            <input type="text" id="pdv" placeholder="Ex: 001">
         </div>
+
+        <div class="form-group">
+            <label for="dados-qrcode">QR CODE A SER GERADO</label>
+            <textarea id="dados-qrcode" rows="4" placeholder="Cole ou digite aqui os dados para o QR Code"></textarea>
+        </div>
+        
         <button id="gerar-btn">Gerar QR Code</button>
+        
         <div id="qrcode-container"></div>
     </div>
 
