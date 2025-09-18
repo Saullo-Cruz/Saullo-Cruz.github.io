@@ -49,7 +49,50 @@ h1 {
         0 0 20px rgba(57, 255, 20, 0.5);
 }
 
-/* --- ESTA É A PARTE QUE VOCÊ DEVE ATUALIZAR --- */
+/* --- ESTILOS PARA O CARD DE PROJETO (NOVA SEÇÃO) --- */
+
+.projeto-card {
+    margin-top: 40px; /* Espaçamento acima para separar do gerador de senha */
+    padding-top: 30px; /* Espaçamento interno */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+}
+
+.projeto-card h3 {
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+    line-height: 1.5;
+    max-width: 400px; /* Evita que o texto fique muito largo */
+    margin: 0 auto 20px auto; /* Centraliza o parágrafo */
+}
+
+.btn-projeto {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #39ff14; /* Borda com a cor neon */
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.btn-projeto:hover {
+    background-color: #39ff14; /* Fundo neon ao passar o mouse */
+    color: #1a1a1a; /* Texto escuro para contraste */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5); /* Efeito de brilho no botão */
+}
+
+/* --- ESTILO ATUALIZADO DO RODAPÉ --- */
 footer {
     position: absolute; /* Tira o rodapé do fluxo normal da página */
     bottom: 20px;       /* Fixa a 20 pixels da parte de baixo */
