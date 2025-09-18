@@ -23,7 +23,7 @@ function calcularEAtualizarSenha() {
     const minutosFormatados = String(minutos).padStart(2, '0');
 
     // Cria a string final de data e hora
-    const textoDataHora = `data: ${diaFormatado}/${mesFormatado}/${ano} horas: ${horaFormatada}:${minutosFormatados}`;
+    const textoDataHora = `Data: ${diaFormatado}/${mesFormatado}/${ano} Horas: ${horaFormatada}:${minutosFormatados}`;
 
     // Atualiza o novo elemento <p> na página
     document.getElementById('data-hora').textContent = textoDataHora;
