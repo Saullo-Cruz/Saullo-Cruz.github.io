@@ -103,3 +103,13 @@ footer {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.9em;
 }
+/* --- ESTILO PARA EXIBIÇÃO DA DATA E HORA --- */
+#data-hora {
+    font-family: Arial, Helvetica, sans-serif; /* Garante que não use a fonte Orbitron */
+    font-size: 1em; /* Tamanho da fonte */
+    color: rgba(255, 255, 255, 0.7); /* Mesma cor do outro parágrafo */
+    margin-top: 15px; /* Espaço entre o número e a data */
+    margin-bottom: 0; /* Remove margem de baixo */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-shadow: none; /* Garante que não tenha o efeito de brilho */
+}
